@@ -1,0 +1,119 @@
+{
+  "clientes": [
+    {
+      "id": "1",
+      "nombre": "",
+      "apellidos": "Guardado"
+    },
+    {
+      "id": "2",
+      "nombre": "juan",
+      "apellidos": "guarnizo"
+    },
+    {
+      "id": "3",
+      "nombre": "carlos",
+      "apellidos": "ramirez"
+    },
+    {
+      "id": "4",
+      "nombre": "David",
+      "apellidos": "Gallegos"
+    },
+    {
+      "id": "5",
+      "nombre": "Carmen",
+      "apellidos": "Hernandez"
+    },
+    {
+      "id": "6",
+      "nombre": "test",
+      "apellidos": "test"
+    },
+    {
+      "id": "7",
+      "nombre": "karla",
+      "apellidos": "cortez"
+    },
+    {
+      "id": "8",
+      "nombre": "test dos",
+      "apellidos": "test dos"
+    },
+    {
+      "id": "9",
+      "nombre": "asd",
+      "apellidos": "qwqe"
+    },
+    {
+      "id": "10",
+      "nombre": "asdqwd",
+      "apellidos": "dasdasd"
+    },
+    {
+      "id": "11",
+      "nombre": "qweqwe",
+      "apellidos": "dasdasd"
+    },
+    {
+      "id": "12",
+      "nombre": "gggggg",
+      "apellidos": "ddddddddd"
+    },
+    {
+      "id": "13",
+      "nombre": "ggggggggggg",
+      "apellidos": "gggggggggg"
+    },
+    {
+      "id": "16",
+      "nombre": "Jordi",
+      "apellidos": "Wild"
+    },
+    {
+      "id": "15",
+      "nombre": "faaasfq",
+      "apellidos": "hhsrh"
+    },
+    {
+      "id": "17",
+      "nombre": "gsdg",
+      "apellidos": "werwer"
+    }
+  ],
+  "ordenes": [
+    {
+      "idProducto": "1",
+      "idCliente": "1",
+      "idOrden": "1",
+      "cantidad": "1",
+      "fecha": "Debora"
+    }
+  ],
+  "productos": [
+    {
+      "id": "1",
+      "nombre": "Debora",
+      "descripcion": "Guardado",
+      "precio": "10"
+    },
+    {
+      "id": "2",
+      "nombre": "pepsi",
+      "descripcion": "bebida carbonatada",
+      "precio": "2"
+    },
+    {
+      "id": "3",
+      "nombre": "coca cola",
+      "descripcion": "veneno",
+      "precio": "$1"
+    },
+    {
+      "id": "4",
+      "nombre": "casa",
+      "descripcion": "casa",
+      "precio": "$15,21,211"
+    }
+  ]
+}

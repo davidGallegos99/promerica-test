@@ -1,0 +1,58 @@
+<div class="row  mt-5 d-flex flex-column align-items-center">
+  <div class="col-10">
+      <h1 class="display-4 text-center">Agregar Producto</h1>
+      <div class="py-4"></div>
+      <form class="row" [formGroup]="this.form">
+        <div class="col-12">
+            <div class="form-group">
+              <label for="">ID</label>
+              <input type="text" formControlName="id" class="form-control">
+              <div class="div-error" *ngIf="getId?.invalid && this.getId?.hasError('required') && (getId?.dirty || getId?.touched || show_error_message)">
+                Ingrese el id
+              </div>
+              <div class="div-error" *ngIf="getId?.invalid && this.getId?.hasError('pattern') && (getId?.dirty || getId?.touched || show_error_message)">
+                No ingrese letas, solo numeros
+              </div>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="form-group">
+              <label for="">Name</label>
+              <input type="text" formControlName="nombre" class="form-control">
+              <div class="div-error" *ngIf="this.getName?.invalid && this.getName?.hasError('required') && (this.getName?.dirty || this.getName?.touched || this.show_error_message)">
+                Ingrese el nombre
+              </div>
+              <div class="div-error" *ngIf="this.getName?.invalid && this.getName?.hasError('pattern') && (this.getName?.dirty || this.getName?.touched || this.show_error_message)">
+                No ingrese numeros
+              </div>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="form-group">
+              <label for="">Descripcion</label>
+              <input type="text" formControlName="descripcion" class="form-control">
+              <div class="div-error" *ngIf="this.getDesc?.invalid && this.getDesc?.hasError('required') && (this.getDesc?.dirty || this.getDesc?.touched || this.show_error_message)">
+                Ingrese la descripccion
+              </div>
+              <div class="div-error" *ngIf="this.getDesc?.invalid && this.getDesc?.hasError('pattern') && (this.getDesc?.dirty || this.getDesc?.touched || this.show_error_message)">
+                No ingrese numeros
+              </div>
+            </div>
+        </div>
+        <div class="col-12">
+          <div class="form-group">
+            <label for="">Precio</label>
+            <input type="text" (input)="formatCurrency($event)"  formControlName="precio" class="form-control">
+            <div class="div-error"  *ngIf="getPrecio?.invalid && this.getPrecio?.hasError('required') && (getPrecio?.dirty || getPrecio?.touched || show_error_message)">
+              Ingrese el precio
+            </div>
+            <div class="div-error" *ngIf=" this.getPrecio?.hasError('minlength')  && (getPrecio?.dirty || getPrecio?.touched || show_error_message)">
+              Numero muy corto
+            </div>
+          </div>
+        </div>
+        <button class="btn btn-success my-4" (click)="this.saveProduct()">Guardar</button>
+      </form>
+  </div>
+
+</div>

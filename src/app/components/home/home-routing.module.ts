@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { Clienteroutes } from './components/cliente/cliente-routing';
-import { HomeComponent } from './components/home/home.component';
-import { productoRoutes } from './components/producto/producto-app-routing';
+import { Clienteroutes } from '../cliente/cliente-routing';
+import { ClienteComponent } from '../cliente/cliente.component';
+import { productoRoutes } from '../producto/producto-app-routing';
+import { HomeComponent } from './home.component';
+
 
 const routes:Routes = [
   {
@@ -17,15 +19,12 @@ const routes:Routes = [
         path:'producto', children:[...productoRoutes]
       }
     ]
-  },
-  {
-    path:'**',
-    redirectTo:'mi-tienda'
   }
 ]
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  imports:[RouterModule.forChild(routes)],
+  exports:[RouterModule]
 })
-export class AppRoutingModule { }
+
+export class HomeRoutingModule {}

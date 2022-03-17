@@ -1,0 +1,46 @@
+<div class="row  mt-5 d-flex flex-column align-items-center">
+  <div class="col-10">
+      <h1 class="display-4 text-center">Agregar cliente</h1>
+      <div class="py-4"></div>
+      <form class="row" [formGroup]="this.form">
+        <div class="col-12">
+            <div class="form-group">
+              <label for="">ID</label>
+              <input type="text" formControlName="id" class="form-control">
+              <div class="div-error" *ngIf="getId?.invalid && this.getId?.hasError('required') && (getId?.dirty || getId?.touched || show_error_message)">
+                Ingrese el id
+              </div>
+              <div class="div-error" *ngIf="getId?.invalid && this.getId?.hasError('pattern') &&  this.getName?.hasError('required') && (getId?.dirty || getId?.touched || show_error_message)">
+                No ingrese letas, solo numeros
+              </div>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="form-group">
+              <label for="">Name</label>
+              <input type="text" formControlName="nombre" class="form-control">
+              <div class="div-error" *ngIf="this.getName?.invalid && this.getName?.hasError('required') && (this.getName?.dirty || this.getName?.touched || this.show_error_message)">
+                Ingrese el nombre
+              </div>
+              <div class="div-error" *ngIf="this.getName?.invalid && this.getName?.hasError('pattern') && (this.getName?.dirty || this.getName?.touched || this.show_error_message)">
+                No ingrese numeros
+              </div>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="form-group">
+              <label for="">Apellidos</label>
+              <input type="text" formControlName="apellidos" class="form-control">
+              <div class="div-error" *ngIf="this.getApellidos?.invalid && this.getApellidos?.hasError('required') && (this.getApellidos?.dirty || this.getApellidos?.touched || this.show_error_message)">
+                Ingrese el apellido
+              </div>
+              <div class="div-error" *ngIf="this.getApellidos?.invalid && this.getApellidos?.hasError('pattern') && (this.getApellidos?.dirty || this.getApellidos?.touched || this.show_error_message)">
+                No ingrese numeros
+              </div>
+            </div>
+        </div>
+        <button class="btn btn-success my-4" (click)="this.saveClient()">Guardar</button>
+      </form>
+  </div>
+
+</div>
