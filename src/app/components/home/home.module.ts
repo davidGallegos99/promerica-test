@@ -7,6 +7,7 @@ import { HomeRoutingModule } from './home-routing.module';
 import { MessageComponent } from '../message/message.component';
 import { NoValuesPipe } from 'src/app/pipes/noValue.pipe';
 import { ErrorDirective } from '../directives/error.directive';
+import { FormatDatePipe } from 'src/app/pipes/format-date.pipe';
 
 
 
@@ -15,12 +16,15 @@ import { ErrorDirective } from '../directives/error.directive';
     HomeComponent,
     MessageComponent,
     NoValuesPipe,
-    ErrorDirective
+    ErrorDirective,
+    FormatDatePipe,
+
   ],
   exports:[
     MessageComponent,
     NoValuesPipe,
-    ErrorDirective
+    ErrorDirective,
+    FormatDatePipe
   ],
   imports: [
     CommonModule,

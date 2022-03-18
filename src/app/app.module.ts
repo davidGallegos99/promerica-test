@@ -8,6 +8,7 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { ClienteModule } from './components/cliente/cliente.module';
 import { ProductoModule } from './components/producto/producto.module';
 import { OrdenModule } from './components/orden/orden.module';
+import { FormatDatePipe } from './pipes/format-date.pipe';
 
 @NgModule({
   declarations: [
