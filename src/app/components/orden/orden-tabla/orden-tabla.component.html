@@ -1,0 +1,20 @@
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Orden</th>
+      <th scope="col">Producto</th>
+      <th scope="col">Cliente</th>
+      <th scope="col">Cantidad</th>
+      <th scope="col">fecha</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let client of this.orders">
+        <td>{{client.id | noValue}}</td>
+        <td>{{client.idProducto | noValue}}</td>
+        <td>{{client.idCliente | noValue }}</td>
+        <td>{{client.cantidad | noValue }}</td>
+        <td>{{client.fecha | noValue }}</td>
+      </tr>
+  </tbody>
+</table>

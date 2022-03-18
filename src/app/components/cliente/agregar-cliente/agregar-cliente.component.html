@@ -1,16 +1,16 @@
 <div class="row  mt-5 d-flex flex-column align-items-center">
-  <div class="col-10">
+  <div class="col-5">
       <h1 class="display-4 text-center">Agregar cliente</h1>
       <div class="py-4"></div>
       <form class="row" [formGroup]="this.form">
         <div class="col-12">
             <div class="form-group">
               <label for="">ID</label>
-              <input type="text" formControlName="id" class="form-control">
+              <input ErrorFeedback type="text" formControlName="id" class="form-control">
               <div class="div-error" *ngIf="getId?.invalid && this.getId?.hasError('required') && (getId?.dirty || getId?.touched || show_error_message)">
                 Ingrese el id
               </div>
-              <div class="div-error" *ngIf="getId?.invalid && this.getId?.hasError('pattern') &&  this.getName?.hasError('required') && (getId?.dirty || getId?.touched || show_error_message)">
+              <div class="div-error" *ngIf="getId?.invalid && this.getId?.hasError('pattern') && (getId?.dirty || getId?.touched || show_error_message)">
                 No ingrese letas, solo numeros
               </div>
             </div>
@@ -18,7 +18,7 @@
         <div class="col-12">
             <div class="form-group">
               <label for="">Name</label>
-              <input type="text" formControlName="nombre" class="form-control">
+              <input ErrorFeedback type="text" formControlName="nombre" class="form-control">
               <div class="div-error" *ngIf="this.getName?.invalid && this.getName?.hasError('required') && (this.getName?.dirty || this.getName?.touched || this.show_error_message)">
                 Ingrese el nombre
               </div>
@@ -30,7 +30,7 @@
         <div class="col-12">
             <div class="form-group">
               <label for="">Apellidos</label>
-              <input type="text" formControlName="apellidos" class="form-control">
+              <input ErrorFeedback type="text" formControlName="apellidos" class="form-control">
               <div class="div-error" *ngIf="this.getApellidos?.invalid && this.getApellidos?.hasError('required') && (this.getApellidos?.dirty || this.getApellidos?.touched || this.show_error_message)">
                 Ingrese el apellido
               </div>

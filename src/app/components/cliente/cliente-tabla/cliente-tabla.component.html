@@ -9,9 +9,9 @@
   </thead>
   <tbody>
       <tr *ngFor="let client of this.clients">
-        <td>{{client.id}}</td>
+        <td>{{client.id | noValue}}</td>
         <td>{{client.nombre | noValue}}</td>
-        <td>{{client.apellidos }}</td>
+        <td>{{client.apellidos | noValue}}</td>
         <td>
           <button (click)="this.showClient(client)" class="btn btn-primary">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">

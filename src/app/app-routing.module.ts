@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { Clienteroutes } from './components/cliente/cliente-routing';
 import { HomeComponent } from './components/home/home.component';
+import { orderRoutes } from './components/orden/orden-routing';
 import { productoRoutes } from './components/producto/producto-app-routing';
 
 const routes:Routes = [
@@ -15,6 +16,9 @@ const routes:Routes = [
       },
       {
         path:'producto', children:[...productoRoutes]
+      },
+      {
+        path:'orden', children:[...orderRoutes]
       }
     ]
   },

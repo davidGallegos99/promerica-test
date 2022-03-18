@@ -1,0 +1,60 @@
+<div class="row  mt-5 d-flex flex-column align-items-center">
+  <div class="col-5">
+      <h1 class="display-4 text-center">Agregar orden</h1>
+      <div class="py-4"></div>
+      <form class="row" [formGroup]="this.form">
+        <div class="col-12">
+            <div class="form-group mt-3">
+              <label for="">ID Orden</label>
+              <input ErrorFeedback type="text" err formControlName="id" class="form-control">
+              <div class="div-error" *ngIf="getIdOrden?.invalid && this.getIdOrden?.hasError('required') && (getIdOrden?.dirty || getIdOrden?.touched || show_error_message)">
+                Ingrese el id de la orden
+              </div>
+              <div class="div-error" *ngIf="getIdOrden?.invalid && this.getIdOrden?.hasError('pattern')  && (getIdOrden?.dirty || getIdOrden?.touched || show_error_message)">
+                No ingrese letras, solo numeros
+              </div>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="form-group mt-3">
+              <label for="">ID Cliente</label>
+              <select  formControlName="idCliente"  class="form-select" >
+                  <option *ngFor="let client of this.clients" value={{client.id}}>{{client.nombre | noValue}}</option>
+              </select>
+              <div class="div-error" *ngIf="getIdCliente?.invalid && this.getIdCliente?.hasError('required') && (getIdCliente?.dirty || getIdCliente?.touched || show_error_message)">
+                Seleccione el id del cliente
+              </div>
+              <div class="div-error" *ngIf="getIdCliente?.invalid && this.getIdCliente?.hasError('pattern')  && (getIdCliente?.dirty || getIdCliente?.touched || show_error_message)">
+                No ingrese letras, solo numeros
+              </div>
+            </div>
+        </div>
+        <div class="col-12">
+          <div class="form-group mt-3">
+            <label for="">ID Producto</label>
+            <select formControlName="idProducto" class="form-select">
+                <option *ngFor="let product of this.products" value={{product.id}}>{{product.nombre}}</option>
+            </select>
+            <div class="div-error" *ngIf="getIdProducto?.invalid && this.getIdProducto?.hasError('required') && (getIdProducto?.dirty || getIdProducto?.touched || show_error_message)">
+              Seleccione el id del producto
+            </div>
+            <div class="div-error" *ngIf="getIdProducto?.invalid && this.getIdProducto?.hasError('pattern')  && (getIdProducto?.dirty || getIdProducto?.touched || show_error_message)">
+              No ingrese letras, solo numeros
+            </div>
+          </div>
+          <div class="form-group mt-3">
+            <label for="">Cantidad</label>
+           <input ErrorFeedback type="text" formControlName="cantidad" class="form-control">
+            <div class="div-error" *ngIf="getCantidad?.invalid && this.getCantidad?.hasError('required') && (getCantidad?.dirty || getCantidad?.touched || show_error_message)">
+              Ingrese una cantidad
+            </div>
+            <div class="div-error" *ngIf="getCantidad?.invalid && this.getCantidad?.hasError('pattern')  && (getCantidad?.dirty || getCantidad?.touched || show_error_message)">
+              No ingrese letras, solo numeros
+            </div>
+          </div>
+
+        </div>
+        <button class="btn btn-success my-4" (click)="this.saveOrder()">Guardar</button>
+      </form>
+  </div>
+</div>

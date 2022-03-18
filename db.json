@@ -88,6 +88,13 @@
       "idOrden": "1",
       "cantidad": "1",
       "fecha": "Debora"
+    },
+    {
+      "idProducto": "2",
+      "idCliente": "7",
+      "id": "2",
+      "cantidad": "2",
+      "fecha": "2022-03-18T04:16:06.557Z"
     }
   ],
   "productos": [
@@ -114,6 +121,12 @@
       "nombre": "casa",
       "descripcion": "casa",
       "precio": "$15,21,211"
+    },
+    {
+      "id": "123",
+      "nombre": "dasdq",
+      "descripcion": "123321",
+      "precio": "$123,232"
     }
   ]
 }

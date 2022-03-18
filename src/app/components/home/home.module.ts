@@ -6,6 +6,7 @@ import { HomeComponent } from './home.component';
 import { HomeRoutingModule } from './home-routing.module';
 import { MessageComponent } from '../message/message.component';
 import { NoValuesPipe } from 'src/app/pipes/noValue.pipe';
+import { ErrorDirective } from '../directives/error.directive';
 
 
 
@@ -14,11 +15,12 @@ import { NoValuesPipe } from 'src/app/pipes/noValue.pipe';
     HomeComponent,
     MessageComponent,
     NoValuesPipe,
-
+    ErrorDirective
   ],
   exports:[
     MessageComponent,
     NoValuesPipe,
+    ErrorDirective
   ],
   imports: [
     CommonModule,
